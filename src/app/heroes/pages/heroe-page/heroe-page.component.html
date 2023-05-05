@@ -1,1 +1,47 @@
-<p>heroe-page works!</p>
+<ng-template #loading>
+  <div class="flex flex-column align-items-center mt-8">
+    <mat-spinner [diameter]="50"></mat-spinner>
+    <span class="mt-4">Loading hero...</span>
+  </div>
+</ng-template>
+
+<div class="grid px-5 py-4" *ngIf="hero; else loading">
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header class="mb-3">
+      <mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+      <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+    </mat-card-header>
+    <img [src]="hero | heroImage" [alt]="hero.superhero" matCardImage />
+  </mat-card>
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header class="mb-3">
+      <mat-card-title>Hero Information</mat-card-title>
+      <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="flex flex-column justify-content-between h-full">
+      <mat-list>
+        <mat-list-item class="px-0"
+          ><strong>First apparition: </strong
+          >{{ hero.first_appearance }}</mat-list-item
+        >
+        <mat-list-item class="px-0"
+          ><strong>Characters: </strong>{{ hero.characters }}</mat-list-item
+        >
+        <mat-list-item class="px-0"
+          ><strong>Publisher: </strong>{{ hero.publisher }}</mat-list-item
+        >
+        <mat-list-item class="px-0"
+          ><strong>Alter Ego: </strong>{{ hero.alter_ego }}</mat-list-item
+        >
+      </mat-list>
+      <button
+        class="align-self-end"
+        color="primary"
+        (click)="goBack()"
+        mat-button
+      >
+        <mat-icon>arrow_back</mat-icon>Go back
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
