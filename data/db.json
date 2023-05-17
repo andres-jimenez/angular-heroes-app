@@ -166,6 +166,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "31dlzJF",
+      "superhero": "Dr. Mundo",
+      "publisher": "DC Comics",
+      "alter_ego": "Mundoniel",
+      "first_appearance": "2015",
+      "characters": "Mundo Ejecutivo",
+      "alt_img": "https://earlygame.com/uploads/images/_headerImage/43224/Corporate-Mundo-Rework.jpg"
     }
   ]
 }

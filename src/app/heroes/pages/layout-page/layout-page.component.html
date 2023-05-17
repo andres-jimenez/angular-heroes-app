@@ -23,7 +23,8 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span class="spacer"></span>
-    <button mat-button>
+    <span *ngIf="currentUser">{{ currentUser.email }}</span>
+    <button (click)="onLogout()" mat-button>
       <mat-icon>logout</mat-icon>
       Logout
     </button>
